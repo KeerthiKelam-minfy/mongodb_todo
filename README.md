@@ -1,5 +1,5 @@
 # mongodb_todo
-<pre> \`\`\`
+<pre> 
 db.todo_list.insertOne({
 status: pending,
 description: "iron clothes"})
@@ -11,12 +11,8 @@ description: "iron clothes"})
   acknowledged: true,
   insertedId: ObjectId('68373bf644e821fa6897f719')
 }
-db.todo_list.updateOne({
-description: "iron clothes", CreatedOn: new Date()})
-MongoInvalidArgumentError: Update document requires atomic operators
-db.todo_list.updateOne({
-description: "iron clothes"}, {CreatedOn: new Date()})
-MongoInvalidArgumentError: Update document requires atomic operators
+	
+	
 db.todo_list.updateOne
 ({description: "iron clothes"}, 
 {$set: {CreatedOn: new Date()}})
@@ -27,17 +23,8 @@ db.todo_list.updateOne
   modifiedCount: 1,
   upsertedCount: 0
 }
-db.todo_list.insertMany({status: "done", description: "have dinner", CreatedOn: new Date()},
-                        {status: "done", description: "eat laddoo", CreatedOn: new Date()},
-												{status: "pending", description: "eat breakfast", CreatedOn: new Date()},
-                        {status: "pending", description: "finish assignment", CreatedOn: new Date()},
-                        {status: "done", description: "do the laundry", CreatedOn: new Date()},
-                        {status: "pending", description: "brush your teeth", CreatedOn: new Date()},
-                        {status: "done", description: "drink water", CreatedOn: new Date()},
-                        {status: "pending", description: "climb the mountain", CreatedOn: new Date()},
-                        {status: "pending", description: "fly in the sky", CreatedOn: new Date()}
-)
-MongoInvalidArgumentError: Argument "docs" must be an array of documents
+
+	
 db.todo_list.insertMany(
 [{status: "done", description: "have dinner", CreatedOn: new Date()},
  {status: "done", description: "eat laddoo", CreatedOn: new Date()},
@@ -64,4 +51,4 @@ db.todo_list.insertMany(
   }
 }
 
-	 \`\`\` </pre>
+	  </pre>
